@@ -1,10 +1,8 @@
 import random
 def get_computer_choice():
-    """Randomly select rock, paper, or scissors for computer."""
     options = ["rock", "paper", "scissors"]
     return random.choice(options)
 def get_user_choice():
-    """Ask user for their choice and validate it."""
     while True:
         user_input = input("Enter your choice (rock/paper/scissors): ").lower()
         if user_input in ["rock", "paper", "scissors"]:
@@ -12,7 +10,6 @@ def get_user_choice():
         else:
             print("❗ Invalid choice. Please enter rock, paper, or scissors.")
 def determine_winner(user, computer):
-    """Compare user and computer choices to determine the winner."""
     if user == computer:
         return "tie"
     elif (user == "rock" and computer == "scissors") or \
